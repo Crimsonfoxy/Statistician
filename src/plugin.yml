@@ -1,8 +1,8 @@
 name: Statistician
 main: com.ChaseHQ.Statistician.StatisticianPlugin
-version: 1.4
+version: 1.4a
 author: ChaseHQ
+authors: [Coryf88]
 softdepend:
-    - Permissions
-    - BukkitContrib
+    - Spout
     
