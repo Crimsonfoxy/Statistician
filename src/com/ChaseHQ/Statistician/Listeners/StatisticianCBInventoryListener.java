@@ -1,7 +1,9 @@
 package com.ChaseHQ.Statistician.Listeners;
 
-import org.bukkitcontrib.event.inventory.InventoryCraftEvent;
-import org.bukkitcontrib.event.inventory.InventoryListener;
+// Commented imports, for now, so Spout dependency is unneeded until this is used.
+//import org.getspout.spoutapi.event.inventory.InventoryCraftEvent;
+//import org.getspout.spoutapi.event.inventory.InventoryListener;
+import org.bukkit.event.inventory.InventoryListener;
 
 import com.ChaseHQ.Statistician.EventDataHandlers.EDHPlayer;
 
@@ -13,10 +15,10 @@ public class StatisticianCBInventoryListener extends InventoryListener {
 		edhPlayer = passedEDH;
 	}
 	
-	@Override
+	/*@Override
 	public void onInventoryCraft(InventoryCraftEvent event) {
 		
-	}
+	}*/
 }
 
 
