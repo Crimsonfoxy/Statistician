@@ -1,0 +1,11 @@
+# Eclipse stuff
+/.classpath
+/.project
+/.buildpath
+/.settings
+
+
+# netbeans
+/nbproject
+/build.xml
+/manifest.mf
