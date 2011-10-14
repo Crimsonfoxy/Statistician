@@ -34,11 +34,13 @@ public class StatisticianPlugin extends JavaPlugin {
 			for (Player player : getServer().getOnlinePlayers()) {	
 				eventDataHandlerPlayer.PlayerQuit(player);
 			}
-		
+
 		if (_playerData != null)
 			_playerData._processData();
 		
-		StatDB.getDB().callStoredProcedure("pluginShutdown", null);
+		StatDB db = StatDB.getDB();
+		if (db != null)
+			db.callStoredProcedure("pluginShutdown", null);
 		
 		_singleton = null;
 		
@@ -57,7 +59,7 @@ public class StatisticianPlugin extends JavaPlugin {
 		
 		executor = Executors.newCachedThreadPool();
 		
-		Log.ConsoleLog("Version " + Config.StatisticianVersion + " By ChaseHQ Starting Up...");
+		Log.ConsoleLog("Version " + Config.getStatisticianVersion() + " By ChaseHQ Starting Up...");
 		
 		// Make sure the configuration is accessible
 		if (Config.getConfig() == null) {
